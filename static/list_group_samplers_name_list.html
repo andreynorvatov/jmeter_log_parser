@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-4">
+      <div class="list-group" id="list-tab_{{ sampler_name_loop_id }}" role="tablist">
+        <a class="list-group-item list-group-item-action" id="list-{{ sampler_name_loop_id }}-list" data-bs-toggle="list" href="#list-{{ sampler_name_loop_id }}" role="tab" aria-controls="list-{{ sampler_name_loop_id }}">{{ sampler_name }} <span class="badge bg-warning rounded-pill-{{ parent_loop_id }}">{{ df['Sampler name'].value_counts().to_dict().get(sampler_name) }}</span></a>
+    </div>
+    </div>
+    <div class="col-8">
+      <div class="tab-content" id="nav-tabContent-{{ sampler_name_loop_id }}">
+        <div class="tab-pane fade" id="list-{{ sampler_name_loop_id }}" role="tabpanel" aria-labelledby="list-{{ sampler_name_loop_id }}-list">
+            {% for time_stamp in df[df["Sampler name"].isin([sampler_name])]["Time stamp"].unique() %}
+                {% set time_stamp_id = loop.index ~ time_stamp| list | reject('in', [' ', '.', ':']) | join %}
+            {% include 'accordion_time_stamp_list.html' %}
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+</div>

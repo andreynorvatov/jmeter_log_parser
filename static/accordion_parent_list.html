@@ -1,0 +1,17 @@
+<div class="accordion" id="accordionPanelsStayOpenExample_parent_{{ parent_loop_id }}">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading{{ parent_loop_id }}">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse{{ parent_loop_id }}" aria-expanded="false" aria-controls="panelsStayOpen-collapse{{ parent_loop_id }}">
+        {{ parent_name }} <span class="badge bg-warning rounded-pill-{{ parent_loop_id }}">{{ df['Parent name'].value_counts().to_dict().get(parent_name) }}</span>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse{{ parent_loop_id }}" class="accordion-collapse collapse bg-secondary text-black" style="--bs-bg-opacity: .25;" aria-labelledby="panelsStayOpen-heading{{ parent_loop_id }}">
+      <div class="accordion-body">
+        {% for sampler_name in df[df["Parent name"].isin([parent_name])]["Sampler name"].unique() %}
+          {% set sampler_name_loop_id = loop.index ~ sampler_name | list | reject('in', [' ', ',', '.', '|', '(', ')', '\\', '/']) | join %}
+          {% include 'list_group_samplers_name_list.html' %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>  
+</div>

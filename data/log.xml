@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<sample t="1400" it="0" lt="0" ct="0" ts="1661435394438" s="false" lb="UC 01.Transfer self" rc="500" rm="Number of samples in transaction : 8, number of failing samples : 1" tn="UC 01.Transfer self 1-2" dt="" de="" by="12025" sby="17318" sc="1" ec="1" ng="4" na="21" hn="VDI-P162">
+  <sample t="42" it="1" lt="0" ct="0" ts="1661435394438" s="true" lb="01.00. - Генерация данных" rc="200" rm="Number of samples in transaction : 1, number of failing samples : 0" tn="UC 01.Transfer self 1-2" dt="" de="" by="591" sby="243" sc="1" ec="0" ng="4" na="21" hn="VDI-P162">
+    <httpSample t="42" it="0" lt="42" ct="24" ts="1661435394439" s="true" lb="01.00.01. - (http) - getDataPoolNextVal (transfer)" rc="200" rm="OK" tn="UC 01.Transfer self 1-2" dt="text" de="utf-8" by="591" sby="243" sc="1" ec="0" ng="4" na="21" hn="VDI-P162">
+      <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Server: nginx/1.12.0
+Date: Thu, 25 Aug 2022 13:49:54 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 229
+Connection: keep-alive
+vary: Origin
+access-control-allow-origin: *
+access-control-expose-headers: xtoken, x-token, fver
+fver: 1.10.50
+sver: 1.0.0
+Strict-Transport-Security: max-age=15724800; includeSubDomains
+</responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json
+Content-Length: 39
+Host: qad.load.homecredit.ru:8081
+User-Agent: Apache-HttpClient/4.5.7 (Java/1.8.0_321)
+</requestHeader>
+      <responseData class="java.lang.String">{&quot;RID&quot;:1348,&quot;CUID&quot;:&quot;18332430&quot;,&quot;ACCOUNTNO&quot;:&quot;40817810490011348387&quot;,&quot;PAN&quot;:&quot;4469157400658104&quot;,&quot;MASKCARD&quot;:&quot;446915XXXXXX8104&quot;,&quot;CONTACT&quot;:&quot;9510934144&quot;,&quot;FIO&quot;:&quot;ВАБЕБЙ БЩГХРЕ СЦСДДТДДНР&quot;,&quot;IS_VALID&quot;:&quot;Y&quot;,&quot;IS_LOCKED&quot;:&quot;N&quot;}</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">POST</method>
+      <queryString class="java.lang.String">{&#xd;
+	&quot;pool_name&quot;:&quot;L1_0_MSRV_TRANSFER&quot;&#xd;
+}</queryString>
+      <java.net.URL>https://qad.load.homecredit.ru:8081/api/datapool/getitem</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <sample t="44" it="1" lt="0" ct="0" ts="1661435394482" s="true" lb="01.01. - Получение токена пользователя для mycredit" rc="200" rm="Number of samples in transaction : 1, number of failing samples : 0" tn="UC 01.Transfer self 1-2" dt="" de="" by="4086" sby="384" sc="1" ec="0" ng="4" na="21" hn="VDI-P162">
+    <httpSample t="44" it="0" lt="44" ct="23" ts="1661435394482" s="true" lb="01.01.01 - (http) - отправка запроса на получения токена" rc="200" rm="" tn="UC 01.Transfer self 1-2" dt="text" de="UTF-8" by="4086" sby="384" sc="1" ec="0" ng="4" na="21" hn="VDI-P162">
+      <assertionResult>
+        <name>RA access_token and transfers/v1</name>
+        <failure>false</failure>
+        <error>false</error>
+      </assertionResult>
+      <responseHeader class="java.lang.String">HTTP/1.1 200 
+x-application-context: system-auth:rancher
+cache-control: no-store
+pragma: no-cache
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+x-frame-options: DENY
+content-type: application/json;charset=UTF-8
+transfer-encoding: chunked
+date: Thu, 25 Aug 2022 13:49:54 GMT
+x-routing-target: renv-0022-pool
+</responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Accept-Encoding: gzip,deflate
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+Content-Length: 0
+Host: balancer-gateway-load1.omni.homecredit.ru:8112
+Authorization: Basic bXlfY3JlZGl0Om15X2NyZWRpdF9zZWNyZXQ=
+</requestHeader>
+      <responseData class="java.lang.String">{
+  &quot;access_token&quot; : &quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdXJyZW50TGV2ZWw6NCIsImN1aWQiOiIxODMzMjQzMCIsInNjb3BlIjpbIi9hcHBsaWNhdGlvbi92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiLCIvcGFzc3BvcnQtaXNzdWVyL3YxIiwiL2Zpb25hL3YxIiwiL2tsYWRyLXBnLXNlYXJjaC92MSIsIi9xNWYvdjEiLCIvY2hlY2tzL3YxIiwiL2NjLXNpZ24vdjEiLCIvc2VydmljZS1tYW5hZ2VtZW50L3YxIiwiL3Bpbi92MS8iLCIvZGVjYXJkL3YxIiwiL2FidGVzdGVyL3YxIiwiL2RlYml0LWNhcmQtcmVnaXN0cnkvdjEiLCIvYm9wcm9kdWN0cy92MSIsIi9kZWJpdC1jYXJkLXJlZ2lzdHJ5L3YyIiwiL2Zvcm1yZWZlcmVuY2UvdjEiLCIvZGVjYXJkL3YyIiwiL3BhbmZpbmRlci92MSIsIi92aXNhLXBob25lLXRyYW5zZmVyL3YxIiwiL3VubWFzay92MSIsIi9jYXJkMnBob25lL3YxIiwiL3NlYXJjaC92MSIsIi9wYXlwYXkvdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2NhcmRyZWdpc3RyeS92MS9wMnBjcmVkaXQiLCIvY2FyZHJlZ2lzdHJ5L3YxL3N0YXR1cyIsIi9jYXJkcmVnaXN0cnkvdjEvY2FyZGluZm8iLCIvY2hhbmcvdjEiLCIvb2ZmZXJtYW5hZ2VyL3YxIiwiL2Zpbi1wcm90ZWN0LW1hbmFnZXIvdjEiLCIvZmluLXByb3RlY3QtbWFuYWdlci92MiIsIi9kZXBvc2l0by92MSIsIi9zbml0Y2gvdjEiLCIvcGluL3YyLyIsIi90cmFuc2ZlcnMvdjEiLCIvdHJhbnNmZXIvdjEiLCIvb3NzL3YxIiwiL3JlcG9ydGluZy1zZXJ2aWNlIiwiL3VybHNob3J0ZXIvdjEiLCIvdHJhbnMvdjEiLCIvc2NhbnMvdjEiLCIvZGlnaXRhbC1jYXJkL3YxIiwiL2lzc3VlLWNhcmQvdjEiLCIvcGhvbmUtdmVyaWZpY2F0aW9uL3YxIiwiL2VzaWEtYWNjb3VudC1pbmZvL3YxIiwiL3Bob25lYm9vay92MSIsIi9kb2N1bWVudC1wYXJzZXIvdjEiLCIvZG9jLWVuZ2luZS92MSIsIi9pbXNpL3YxIiwiL3R3LXNlcnZpY2VzLW1hbmFnZXIvdjEiLCIvc3VwcG9ydG5vdGlmL3YxIiwiL2pvdXJuYWxpc3QvdjEiLCJrYWZrYSIsIi9wYXltZW50cy92MSIsIi9lbWlzc2lvL3YxIiwiL1Bhc3NDb2RlL3YxIiwiL3NiZXItdHJhbnNmZXIvdjEiLCIvcGluL3YzIiwiL2NyZWNhcmQvdjIiLCIvY29udHJhY3QtaW5mby92MSIsIi9jb29sLWNvZGUvdjIiLCJjaGF0IiwiL2xpbWl0YXRvci92MSIsIi9tYnIvZGVsaXZlcnkvdjEiLCIvZGJvc2Nhbi92MSIsIi9tYnIvcGFja2FnZXMvdjEiLCIvZGVsaXZlcnkvdjEiLCIvbGltaXRhdG9yL3YyIiwiY3VycmVudGxldmVsMCIsImN1cnJlbnRsZXZlbDEiLCJjdXJyZW50bGV2ZWwyIiwiL2licy9yZXN0IiwiY3VycmVudGxldmVsMyIsIi9pYnMvcmVzdC9hY3RpdmUiLCJjdXJyZW50bGV2ZWw0Il0sImV4cCI6MTY2MTQzODk5NCwianRpIjoiODIzYjAwMTAtZjFjMS00OGJlLWI2MTgtMDI3ZDFhMTVjMTFhIiwiY2xpZW50X2lkIjoibXlfY3JlZGl0In0.Qo6nuPfELd1XZJT96oT-4Z_hdMJXs6HiXv46pLx3oKsSe5XIV7TOXt7As-nN3uWqIS468LB2WuO2sEhmkDVJnPFGthVb-zCzThpjcmT3qKTv-55-vB5-MXiEevY5qcddv6UmFpLv5-JdcZdDkGj1mFJbSuX5w-jpKxOqlsbwWXHEATm8Bk2LRCVbgTwkMKncxsu5AlHQSW1kCjF_2sBl4FZqs-uuRT05j2wVWvTbXHcgzhip5DdoAyddG91DiFDCIzvCoy2J6GcSdVclKOXY_YYAjKRzHkWb8MjoLuYA6mWDvObcuC5JdhRnZP1o1TjiApA0Y3Ud3yGcEbypawcIiQ&quot;,
+  &quot;token_type&quot; : &quot;bearer&quot;,
+  &quot;expires_in&quot; : 3599,
+  &quot;scope&quot; : &quot;/application/v1 /biker/v1 /kladr/v1 /esia/v1 /cascader/v1 /commissar/v1 /templator/v1 /passport-issuer/v1 /fiona/v1 /kladr-pg-search/v1 /q5f/v1 /checks/v1 /cc-sign/v1 /service-management/v1 /pin/v1/ /decard/v1 /abtester/v1 /debit-card-registry/v1 /boproducts/v1 /debit-card-registry/v2 /formreference/v1 /decard/v2 /panfinder/v1 /visa-phone-transfer/v1 /unmask/v1 /card2phone/v1 /search/v1 /paypay/v1 /cardregistry/v1 /cardregistry/v1/p2pcredit /cardregistry/v1/status /cardregistry/v1/cardinfo /chang/v1 /offermanager/v1 /fin-protect-manager/v1 /fin-protect-manager/v2 /deposito/v1 /snitch/v1 /pin/v2/ /transfers/v1 /transfer/v1 /oss/v1 /reporting-service /urlshorter/v1 /trans/v1 /scans/v1 /digital-card/v1 /issue-card/v1 /phone-verification/v1 /esia-account-info/v1 /phonebook/v1 /document-parser/v1 /doc-engine/v1 /imsi/v1 /tw-services-manager/v1 /supportnotif/v1 /journalist/v1 kafka /payments/v1 /emissio/v1 /PassCode/v1 /sber-transfer/v1 /pin/v3 /crecard/v2 /contract-info/v1 /cool-code/v2 chat /limitator/v1 /mbr/delivery/v1 /dboscan/v1 /mbr/packages/v1 /delivery/v1 /limitator/v2 currentlevel0 currentlevel1 currentlevel2 /ibs/rest currentlevel3 /ibs/rest/active currentlevel4&quot;,
+  &quot;sub&quot; : &quot;currentLevel:4&quot;,
+  &quot;cuid&quot; : &quot;18332430&quot;,
+  &quot;jti&quot; : &quot;823b0010-f1c1-48be-b618-027d1a15c11a&quot;
+}</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">POST</method>
+      <queryString class="java.lang.String"></queryString>
+      <java.net.URL>https://balancer-gateway-load1.omni.homecredit.ru:8112/oauth/token?grant_type=client_credentials&amp;sub=currentLevel:4&amp;cuid=18332430</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <sample t="338" it="0" lt="0" ct="0" ts="1661435394527" s="true" lb="01.02. - Создание сессии (self)" rc="200" rm="Number of samples in transaction : 1, number of failing samples : 0" tn="UC 01.Transfer self 1-2" dt="" de="" by="2016" sby="2604" sc="1" ec="0" ng="4" na="21" hn="VDI-P162">
+    <httpSample t="338" it="0" lt="337" ct="0" ts="1661435394527" s="true" lb="01.02.01 - /transfer/v1/self/transfer" rc="200" rm="" tn="UC 01.Transfer self 1-2" dt="text" de="UTF-8" by="2016" sby="2604" sc="1" ec="0" ng="4" na="21" hn="VDI-P162">
+      <assertionResult>
+        <name>RA 200</name>
+        <failure>false</failure>
+        <error>false</error>
+      </assertionResult>
+      <responseHeader class="java.lang.String">HTTP/1.1 200 
+vary: Origin
+vary: Access-Control-Request-Method
+vary: Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+strict-transport-security: max-age=31536000 ; includeSubDomains
+x-frame-options: DENY
+content-type: application/json;charset=UTF-8
+transfer-encoding: chunked
+date: Thu, 25 Aug 2022 13:49:55 GMT
+x-routing-target: renv-0022-pool
+</responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdXJyZW50TGV2ZWw6NCIsImN1aWQiOiIxODMzMjQzMCIsInNjb3BlIjpbIi9hcHBsaWNhdGlvbi92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiLCIvcGFzc3BvcnQtaXNzdWVyL3YxIiwiL2Zpb25hL3YxIiwiL2tsYWRyLXBnLXNlYXJjaC92MSIsIi9xNWYvdjEiLCIvY2hlY2tzL3YxIiwiL2NjLXNpZ24vdjEiLCIvc2VydmljZS1tYW5hZ2VtZW50L3YxIiwiL3Bpbi92MS8iLCIvZGVjYXJkL3YxIiwiL2FidGVzdGVyL3YxIiwiL2RlYml0LWNhcmQtcmVnaXN0cnkvdjEiLCIvYm9wcm9kdWN0cy92MSIsIi9kZWJpdC1jYXJkLXJlZ2lzdHJ5L3YyIiwiL2Zvcm1yZWZlcmVuY2UvdjEiLCIvZGVjYXJkL3YyIiwiL3BhbmZpbmRlci92MSIsIi92aXNhLXBob25lLXRyYW5zZmVyL3YxIiwiL3VubWFzay92MSIsIi9jYXJkMnBob25lL3YxIiwiL3NlYXJjaC92MSIsIi9wYXlwYXkvdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2NhcmRyZWdpc3RyeS92MS9wMnBjcmVkaXQiLCIvY2FyZHJlZ2lzdHJ5L3YxL3N0YXR1cyIsIi9jYXJkcmVnaXN0cnkvdjEvY2FyZGluZm8iLCIvY2hhbmcvdjEiLCIvb2ZmZXJtYW5hZ2VyL3YxIiwiL2Zpbi1wcm90ZWN0LW1hbmFnZXIvdjEiLCIvZmluLXByb3RlY3QtbWFuYWdlci92MiIsIi9kZXBvc2l0by92MSIsIi9zbml0Y2gvdjEiLCIvcGluL3YyLyIsIi90cmFuc2ZlcnMvdjEiLCIvdHJhbnNmZXIvdjEiLCIvb3NzL3YxIiwiL3JlcG9ydGluZy1zZXJ2aWNlIiwiL3VybHNob3J0ZXIvdjEiLCIvdHJhbnMvdjEiLCIvc2NhbnMvdjEiLCIvZGlnaXRhbC1jYXJkL3YxIiwiL2lzc3VlLWNhcmQvdjEiLCIvcGhvbmUtdmVyaWZpY2F0aW9uL3YxIiwiL2VzaWEtYWNjb3VudC1pbmZvL3YxIiwiL3Bob25lYm9vay92MSIsIi9kb2N1bWVudC1wYXJzZXIvdjEiLCIvZG9jLWVuZ2luZS92MSIsIi9pbXNpL3YxIiwiL3R3LXNlcnZpY2VzLW1hbmFnZXIvdjEiLCIvc3VwcG9ydG5vdGlmL3YxIiwiL2pvdXJuYWxpc3QvdjEiLCJrYWZrYSIsIi9wYXltZW50cy92MSIsIi9lbWlzc2lvL3YxIiwiL1Bhc3NDb2RlL3YxIiwiL3NiZXItdHJhbnNmZXIvdjEiLCIvcGluL3YzIiwiL2NyZWNhcmQvdjIiLCIvY29udHJhY3QtaW5mby92MSIsIi9jb29sLWNvZGUvdjIiLCJjaGF0IiwiL2xpbWl0YXRvci92MSIsIi9tYnIvZGVsaXZlcnkvdjEiLCIvZGJvc2Nhbi92MSIsIi9tYnIvcGFja2FnZXMvdjEiLCIvZGVsaXZlcnkvdjEiLCIvbGltaXRhdG9yL3YyIiwiY3VycmVudGxldmVsMCIsImN1cnJlbnRsZXZlbDEiLCJjdXJyZW50bGV2ZWwyIiwiL2licy9yZXN0IiwiY3VycmVudGxldmVsMyIsIi9pYnMvcmVzdC9hY3RpdmUiLCJjdXJyZW50bGV2ZWw0Il0sImV4cCI6MTY2MTQzODk5NCwianRpIjoiODIzYjAwMTAtZjFjMS00OGJlLWI2MTgtMDI3ZDFhMTVjMTFhIiwiY2xpZW50X2lkIjoibXlfY3JlZGl0In0.Qo6nuPfELd1XZJT96oT-4Z_hdMJXs6HiXv46pLx3oKsSe5XIV7TOXt7As-nN3uWqIS468LB2WuO2sEhmkDVJnPFGthVb-zCzThpjcmT3qKTv-55-vB5-MXiEevY5qcddv6UmFpLv5-JdcZdDkGj1mFJbSuX5w-jpKxOqlsbwWXHEATm8Bk2LRCVbgTwkMKncxsu5AlHQSW1kCjF_2sBl4FZqs-uuRT05j2wVWvTbXHcgzhip5DdoAyddG91DiFDCIzvCoy2J6GcSdVclKOXY_YYAjKRzHkWb8MjoLuYA6mWDvObcuC5JdhRnZP1o1TjiApA0Y3Ud3yGcEbypawcIiQ
+Host: balancer-gateway-load1.omni.homecredit.ru:8112
+User-Agent: Apache-HttpClient/4.5.7 (Java/1.8.0_321)
+</requestHeader>
+      <responseData class="java.lang.String">{&quot;productFrom&quot;:[{&quot;maskCardNumber&quot;:&quot;4469 15** **** 8104&quot;,&quot;accountNumber&quot;:&quot;40817810490011348387&quot;,&quot;type&quot;:&quot;debit&quot;,&quot;availableBalance&quot;:28970.65,&quot;currency&quot;:&quot;RUR&quot;}],&quot;productTo&quot;:[{&quot;maskCardNumber&quot;:&quot;4469 15** **** 8104&quot;,&quot;accountNumber&quot;:&quot;40817810490011348387&quot;,&quot;type&quot;:&quot;debit&quot;,&quot;availableBalance&quot;:28970.65,&quot;currency&quot;:&quot;RUR&quot;},{&quot;accountNumber&quot;:&quot;42301810140300401676&quot;,&quot;type&quot;:&quot;loan&quot;,&quot;availableBalance&quot;:0.23,&quot;currency&quot;:&quot;RUR&quot;},{&quot;maskCardNumber&quot;:&quot;4062 96** **** 2266&quot;,&quot;accountNumber&quot;:&quot;40817810493300042867&quot;,&quot;type&quot;:&quot;credit&quot;,&quot;availableBalance&quot;:0,&quot;currency&quot;:&quot;RUR&quot;}],&quot;links&quot;:[{&quot;rel&quot;:&quot;commission&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/commission&quot;},{&quot;rel&quot;:&quot;type&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/type&quot;},{&quot;rel&quot;:&quot;confirm&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/confirm&quot;},{&quot;rel&quot;:&quot;product-list&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/product-list&quot;},{&quot;rel&quot;:&quot;product-list-v2&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v2/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/product-list&quot;},{&quot;rel&quot;:&quot;exchange-rates&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/exchange-rates&quot;}]}</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">GET</method>
+      <queryString class="java.lang.String"></queryString>
+      <java.net.URL>https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <sample t="25" it="0" lt="0" ct="0" ts="1661435394869" s="true" lb="01.03. - Получение списка доступных продуктов списания/пополнения" rc="200" rm="Number of samples in transaction : 1, number of failing samples : 0" tn="UC 01.Transfer self 1-2" dt="" de="" by="1351" sby="2799" sc="1" ec="0" ng="4" na="21" hn="VDI-P162">
+    <httpSample t="25" it="0" lt="25" ct="0" ts="1661435394869" s="true" lb="01.03.01. - /transfer/v1/self/transfer/huid/product-list" rc="200" rm="" tn="UC 01.Transfer self 1-2" dt="text" de="UTF-8" by="1351" sby="2799" sc="1" ec="0" ng="4" na="21" hn="VDI-P162">
+      <assertionResult>
+        <name>RA 200</name>
+        <failure>false</failure>
+        <error>false</error>
+      </assertionResult>
+      <responseHeader class="java.lang.String">HTTP/1.1 200 
+vary: Origin
+vary: Access-Control-Request-Method
+vary: Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+strict-transport-security: max-age=31536000 ; includeSubDomains
+x-frame-options: DENY
+content-type: application/json;charset=UTF-8
+transfer-encoding: chunked
+date: Thu, 25 Aug 2022 13:49:55 GMT
+x-routing-target: renv-0022-pool
+</responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdXJyZW50TGV2ZWw6NCIsImN1aWQiOiIxODMzMjQzMCIsInNjb3BlIjpbIi9hcHBsaWNhdGlvbi92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiLCIvcGFzc3BvcnQtaXNzdWVyL3YxIiwiL2Zpb25hL3YxIiwiL2tsYWRyLXBnLXNlYXJjaC92MSIsIi9xNWYvdjEiLCIvY2hlY2tzL3YxIiwiL2NjLXNpZ24vdjEiLCIvc2VydmljZS1tYW5hZ2VtZW50L3YxIiwiL3Bpbi92MS8iLCIvZGVjYXJkL3YxIiwiL2FidGVzdGVyL3YxIiwiL2RlYml0LWNhcmQtcmVnaXN0cnkvdjEiLCIvYm9wcm9kdWN0cy92MSIsIi9kZWJpdC1jYXJkLXJlZ2lzdHJ5L3YyIiwiL2Zvcm1yZWZlcmVuY2UvdjEiLCIvZGVjYXJkL3YyIiwiL3BhbmZpbmRlci92MSIsIi92aXNhLXBob25lLXRyYW5zZmVyL3YxIiwiL3VubWFzay92MSIsIi9jYXJkMnBob25lL3YxIiwiL3NlYXJjaC92MSIsIi9wYXlwYXkvdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2NhcmRyZWdpc3RyeS92MS9wMnBjcmVkaXQiLCIvY2FyZHJlZ2lzdHJ5L3YxL3N0YXR1cyIsIi9jYXJkcmVnaXN0cnkvdjEvY2FyZGluZm8iLCIvY2hhbmcvdjEiLCIvb2ZmZXJtYW5hZ2VyL3YxIiwiL2Zpbi1wcm90ZWN0LW1hbmFnZXIvdjEiLCIvZmluLXByb3RlY3QtbWFuYWdlci92MiIsIi9kZXBvc2l0by92MSIsIi9zbml0Y2gvdjEiLCIvcGluL3YyLyIsIi90cmFuc2ZlcnMvdjEiLCIvdHJhbnNmZXIvdjEiLCIvb3NzL3YxIiwiL3JlcG9ydGluZy1zZXJ2aWNlIiwiL3VybHNob3J0ZXIvdjEiLCIvdHJhbnMvdjEiLCIvc2NhbnMvdjEiLCIvZGlnaXRhbC1jYXJkL3YxIiwiL2lzc3VlLWNhcmQvdjEiLCIvcGhvbmUtdmVyaWZpY2F0aW9uL3YxIiwiL2VzaWEtYWNjb3VudC1pbmZvL3YxIiwiL3Bob25lYm9vay92MSIsIi9kb2N1bWVudC1wYXJzZXIvdjEiLCIvZG9jLWVuZ2luZS92MSIsIi9pbXNpL3YxIiwiL3R3LXNlcnZpY2VzLW1hbmFnZXIvdjEiLCIvc3VwcG9ydG5vdGlmL3YxIiwiL2pvdXJuYWxpc3QvdjEiLCJrYWZrYSIsIi9wYXltZW50cy92MSIsIi9lbWlzc2lvL3YxIiwiL1Bhc3NDb2RlL3YxIiwiL3NiZXItdHJhbnNmZXIvdjEiLCIvcGluL3YzIiwiL2NyZWNhcmQvdjIiLCIvY29udHJhY3QtaW5mby92MSIsIi9jb29sLWNvZGUvdjIiLCJjaGF0IiwiL2xpbWl0YXRvci92MSIsIi9tYnIvZGVsaXZlcnkvdjEiLCIvZGJvc2Nhbi92MSIsIi9tYnIvcGFja2FnZXMvdjEiLCIvZGVsaXZlcnkvdjEiLCIvbGltaXRhdG9yL3YyIiwiY3VycmVudGxldmVsMCIsImN1cnJlbnRsZXZlbDEiLCJjdXJyZW50bGV2ZWwyIiwiL2licy9yZXN0IiwiY3VycmVudGxldmVsMyIsIi9pYnMvcmVzdC9hY3RpdmUiLCJjdXJyZW50bGV2ZWw0Il0sImV4cCI6MTY2MTQzODk5NCwianRpIjoiODIzYjAwMTAtZjFjMS00OGJlLWI2MTgtMDI3ZDFhMTVjMTFhIiwiY2xpZW50X2lkIjoibXlfY3JlZGl0In0.Qo6nuPfELd1XZJT96oT-4Z_hdMJXs6HiXv46pLx3oKsSe5XIV7TOXt7As-nN3uWqIS468LB2WuO2sEhmkDVJnPFGthVb-zCzThpjcmT3qKTv-55-vB5-MXiEevY5qcddv6UmFpLv5-JdcZdDkGj1mFJbSuX5w-jpKxOqlsbwWXHEATm8Bk2LRCVbgTwkMKncxsu5AlHQSW1kCjF_2sBl4FZqs-uuRT05j2wVWvTbXHcgzhip5DdoAyddG91DiFDCIzvCoy2J6GcSdVclKOXY_YYAjKRzHkWb8MjoLuYA6mWDvObcuC5JdhRnZP1o1TjiApA0Y3Ud3yGcEbypawcIiQ
+Content-Length: 123
+Host: balancer-gateway-load1.omni.homecredit.ru:8112
+User-Agent: Apache-HttpClient/4.5.7 (Java/1.8.0_321)
+</requestHeader>
+      <responseData class="java.lang.String">{&quot;productTo&quot;:[{&quot;accountNumber&quot;:&quot;42301810140300401676&quot;,&quot;type&quot;:&quot;loan&quot;,&quot;availableBalance&quot;:0.23,&quot;currency&quot;:&quot;RUR&quot;},{&quot;maskCardNumber&quot;:&quot;406296******2266&quot;,&quot;accountNumber&quot;:&quot;40817810493300042867&quot;,&quot;type&quot;:&quot;credit&quot;,&quot;availableBalance&quot;:0,&quot;currency&quot;:&quot;RUR&quot;}],&quot;links&quot;:[{&quot;rel&quot;:&quot;type&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/type&quot;},{&quot;rel&quot;:&quot;exchange-rates&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/exchange-rates&quot;},{&quot;rel&quot;:&quot;transfer&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer&quot;},{&quot;rel&quot;:&quot;product-list-v2&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v2/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/product-list&quot;}]}</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">POST</method>
+      <queryString class="java.lang.String">{&#xd;
+  &quot;productFrom&quot; : {&#xd;
+    &quot;maskCardNumber&quot; : &quot;4469 15** **** 8104&quot;,&#xd;
+    &quot;accountNumber&quot; : &quot;40817810490011348387&quot;&#xd;
+  }&#xd;
+}</queryString>
+      <java.net.URL>https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/product-list</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <sample t="324" it="2" lt="0" ct="0" ts="1661435394897" s="true" lb="01.04. - Определение типа перевода" rc="200" rm="Number of samples in transaction : 1, number of failing samples : 0" tn="UC 01.Transfer self 1-2" dt="" de="" by="1162" sby="2890" sc="1" ec="0" ng="4" na="21" hn="VDI-P162">
+    <httpSample t="324" it="0" lt="324" ct="0" ts="1661435394898" s="true" lb="01.04.01. - /transfer/v1/self/transfer/huid/type" rc="200" rm="" tn="UC 01.Transfer self 1-2" dt="text" de="UTF-8" by="1162" sby="2890" sc="1" ec="0" ng="4" na="21" hn="VDI-P162">
+      <assertionResult>
+        <name>RA 200</name>
+        <failure>false</failure>
+        <error>false</error>
+      </assertionResult>
+      <responseHeader class="java.lang.String">HTTP/1.1 200 
+vary: Origin
+vary: Access-Control-Request-Method
+vary: Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+strict-transport-security: max-age=31536000 ; includeSubDomains
+x-frame-options: DENY
+content-type: application/json;charset=UTF-8
+transfer-encoding: chunked
+date: Thu, 25 Aug 2022 13:49:55 GMT
+x-routing-target: renv-0022-pool
+</responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdXJyZW50TGV2ZWw6NCIsImN1aWQiOiIxODMzMjQzMCIsInNjb3BlIjpbIi9hcHBsaWNhdGlvbi92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiLCIvcGFzc3BvcnQtaXNzdWVyL3YxIiwiL2Zpb25hL3YxIiwiL2tsYWRyLXBnLXNlYXJjaC92MSIsIi9xNWYvdjEiLCIvY2hlY2tzL3YxIiwiL2NjLXNpZ24vdjEiLCIvc2VydmljZS1tYW5hZ2VtZW50L3YxIiwiL3Bpbi92MS8iLCIvZGVjYXJkL3YxIiwiL2FidGVzdGVyL3YxIiwiL2RlYml0LWNhcmQtcmVnaXN0cnkvdjEiLCIvYm9wcm9kdWN0cy92MSIsIi9kZWJpdC1jYXJkLXJlZ2lzdHJ5L3YyIiwiL2Zvcm1yZWZlcmVuY2UvdjEiLCIvZGVjYXJkL3YyIiwiL3BhbmZpbmRlci92MSIsIi92aXNhLXBob25lLXRyYW5zZmVyL3YxIiwiL3VubWFzay92MSIsIi9jYXJkMnBob25lL3YxIiwiL3NlYXJjaC92MSIsIi9wYXlwYXkvdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2NhcmRyZWdpc3RyeS92MS9wMnBjcmVkaXQiLCIvY2FyZHJlZ2lzdHJ5L3YxL3N0YXR1cyIsIi9jYXJkcmVnaXN0cnkvdjEvY2FyZGluZm8iLCIvY2hhbmcvdjEiLCIvb2ZmZXJtYW5hZ2VyL3YxIiwiL2Zpbi1wcm90ZWN0LW1hbmFnZXIvdjEiLCIvZmluLXByb3RlY3QtbWFuYWdlci92MiIsIi9kZXBvc2l0by92MSIsIi9zbml0Y2gvdjEiLCIvcGluL3YyLyIsIi90cmFuc2ZlcnMvdjEiLCIvdHJhbnNmZXIvdjEiLCIvb3NzL3YxIiwiL3JlcG9ydGluZy1zZXJ2aWNlIiwiL3VybHNob3J0ZXIvdjEiLCIvdHJhbnMvdjEiLCIvc2NhbnMvdjEiLCIvZGlnaXRhbC1jYXJkL3YxIiwiL2lzc3VlLWNhcmQvdjEiLCIvcGhvbmUtdmVyaWZpY2F0aW9uL3YxIiwiL2VzaWEtYWNjb3VudC1pbmZvL3YxIiwiL3Bob25lYm9vay92MSIsIi9kb2N1bWVudC1wYXJzZXIvdjEiLCIvZG9jLWVuZ2luZS92MSIsIi9pbXNpL3YxIiwiL3R3LXNlcnZpY2VzLW1hbmFnZXIvdjEiLCIvc3VwcG9ydG5vdGlmL3YxIiwiL2pvdXJuYWxpc3QvdjEiLCJrYWZrYSIsIi9wYXltZW50cy92MSIsIi9lbWlzc2lvL3YxIiwiL1Bhc3NDb2RlL3YxIiwiL3NiZXItdHJhbnNmZXIvdjEiLCIvcGluL3YzIiwiL2NyZWNhcmQvdjIiLCIvY29udHJhY3QtaW5mby92MSIsIi9jb29sLWNvZGUvdjIiLCJjaGF0IiwiL2xpbWl0YXRvci92MSIsIi9tYnIvZGVsaXZlcnkvdjEiLCIvZGJvc2Nhbi92MSIsIi9tYnIvcGFja2FnZXMvdjEiLCIvZGVsaXZlcnkvdjEiLCIvbGltaXRhdG9yL3YyIiwiY3VycmVudGxldmVsMCIsImN1cnJlbnRsZXZlbDEiLCJjdXJyZW50bGV2ZWwyIiwiL2licy9yZXN0IiwiY3VycmVudGxldmVsMyIsIi9pYnMvcmVzdC9hY3RpdmUiLCJjdXJyZW50bGV2ZWw0Il0sImV4cCI6MTY2MTQzODk5NCwianRpIjoiODIzYjAwMTAtZjFjMS00OGJlLWI2MTgtMDI3ZDFhMTVjMTFhIiwiY2xpZW50X2lkIjoibXlfY3JlZGl0In0.Qo6nuPfELd1XZJT96oT-4Z_hdMJXs6HiXv46pLx3oKsSe5XIV7TOXt7As-nN3uWqIS468LB2WuO2sEhmkDVJnPFGthVb-zCzThpjcmT3qKTv-55-vB5-MXiEevY5qcddv6UmFpLv5-JdcZdDkGj1mFJbSuX5w-jpKxOqlsbwWXHEATm8Bk2LRCVbgTwkMKncxsu5AlHQSW1kCjF_2sBl4FZqs-uuRT05j2wVWvTbXHcgzhip5DdoAyddG91DiFDCIzvCoy2J6GcSdVclKOXY_YYAjKRzHkWb8MjoLuYA6mWDvObcuC5JdhRnZP1o1TjiApA0Y3Ud3yGcEbypawcIiQ
+Content-Length: 222
+Host: balancer-gateway-load1.omni.homecredit.ru:8112
+User-Agent: Apache-HttpClient/4.5.7 (Java/1.8.0_321)
+</requestHeader>
+      <responseData class="java.lang.String">{&quot;transferType&quot;:&quot;internalSelf&quot;,&quot;recipientName&quot;:&quot;БЩГХРЕ В.&quot;,&quot;enrolment&quot;:&quot;Деньги придут сразу&quot;,&quot;limit&quot;:{&quot;minTransferLimit&quot;:0.01,&quot;maxTransferLimit&quot;:999999999.99},&quot;links&quot;:[{&quot;rel&quot;:&quot;type&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/type&quot;},{&quot;rel&quot;:&quot;commission&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/commission&quot;},{&quot;rel&quot;:&quot;confirm&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/confirm&quot;}]}</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">POST</method>
+      <queryString class="java.lang.String">{&#xd;
+  &quot;productFrom&quot; : {&#xd;
+    &quot;maskCardNumber&quot; : &quot;4469 15** **** 8104&quot;,&#xd;
+    &quot;accountNumber&quot; : &quot;40817810490011348387&quot;&#xd;
+  },&#xd;
+  &quot;productTo&quot; : {&quot;maskCardNumber&quot; : &quot;406296******2266&quot;,&quot;accountNumber&quot; : &quot;40817810493300042867&quot;}&#xd;
+}</queryString>
+      <java.net.URL>https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/type</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <sample t="33" it="0" lt="0" ct="0" ts="1661435395223" s="true" lb="01.05. - Расчет комиссии" rc="200" rm="Number of samples in transaction : 1, number of failing samples : 0" tn="UC 01.Transfer self 1-2" dt="" de="" by="1210" sby="2717" sc="1" ec="0" ng="4" na="21" hn="VDI-P162">
+    <httpSample t="33" it="0" lt="33" ct="0" ts="1661435395223" s="true" lb="01.05.01. - /transfer/v1/self/transfer/huid/commission" rc="200" rm="" tn="UC 01.Transfer self 1-2" dt="text" de="UTF-8" by="1210" sby="2717" sc="1" ec="0" ng="4" na="21" hn="VDI-P162">
+      <assertionResult>
+        <name>RA 200</name>
+        <failure>false</failure>
+        <error>false</error>
+      </assertionResult>
+      <responseHeader class="java.lang.String">HTTP/1.1 200 
+vary: Origin
+vary: Access-Control-Request-Method
+vary: Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+strict-transport-security: max-age=31536000 ; includeSubDomains
+x-frame-options: DENY
+content-type: application/json;charset=UTF-8
+transfer-encoding: chunked
+date: Thu, 25 Aug 2022 13:49:55 GMT
+x-routing-target: renv-0022-pool
+</responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdXJyZW50TGV2ZWw6NCIsImN1aWQiOiIxODMzMjQzMCIsInNjb3BlIjpbIi9hcHBsaWNhdGlvbi92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiLCIvcGFzc3BvcnQtaXNzdWVyL3YxIiwiL2Zpb25hL3YxIiwiL2tsYWRyLXBnLXNlYXJjaC92MSIsIi9xNWYvdjEiLCIvY2hlY2tzL3YxIiwiL2NjLXNpZ24vdjEiLCIvc2VydmljZS1tYW5hZ2VtZW50L3YxIiwiL3Bpbi92MS8iLCIvZGVjYXJkL3YxIiwiL2FidGVzdGVyL3YxIiwiL2RlYml0LWNhcmQtcmVnaXN0cnkvdjEiLCIvYm9wcm9kdWN0cy92MSIsIi9kZWJpdC1jYXJkLXJlZ2lzdHJ5L3YyIiwiL2Zvcm1yZWZlcmVuY2UvdjEiLCIvZGVjYXJkL3YyIiwiL3BhbmZpbmRlci92MSIsIi92aXNhLXBob25lLXRyYW5zZmVyL3YxIiwiL3VubWFzay92MSIsIi9jYXJkMnBob25lL3YxIiwiL3NlYXJjaC92MSIsIi9wYXlwYXkvdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2NhcmRyZWdpc3RyeS92MS9wMnBjcmVkaXQiLCIvY2FyZHJlZ2lzdHJ5L3YxL3N0YXR1cyIsIi9jYXJkcmVnaXN0cnkvdjEvY2FyZGluZm8iLCIvY2hhbmcvdjEiLCIvb2ZmZXJtYW5hZ2VyL3YxIiwiL2Zpbi1wcm90ZWN0LW1hbmFnZXIvdjEiLCIvZmluLXByb3RlY3QtbWFuYWdlci92MiIsIi9kZXBvc2l0by92MSIsIi9zbml0Y2gvdjEiLCIvcGluL3YyLyIsIi90cmFuc2ZlcnMvdjEiLCIvdHJhbnNmZXIvdjEiLCIvb3NzL3YxIiwiL3JlcG9ydGluZy1zZXJ2aWNlIiwiL3VybHNob3J0ZXIvdjEiLCIvdHJhbnMvdjEiLCIvc2NhbnMvdjEiLCIvZGlnaXRhbC1jYXJkL3YxIiwiL2lzc3VlLWNhcmQvdjEiLCIvcGhvbmUtdmVyaWZpY2F0aW9uL3YxIiwiL2VzaWEtYWNjb3VudC1pbmZvL3YxIiwiL3Bob25lYm9vay92MSIsIi9kb2N1bWVudC1wYXJzZXIvdjEiLCIvZG9jLWVuZ2luZS92MSIsIi9pbXNpL3YxIiwiL3R3LXNlcnZpY2VzLW1hbmFnZXIvdjEiLCIvc3VwcG9ydG5vdGlmL3YxIiwiL2pvdXJuYWxpc3QvdjEiLCJrYWZrYSIsIi9wYXltZW50cy92MSIsIi9lbWlzc2lvL3YxIiwiL1Bhc3NDb2RlL3YxIiwiL3NiZXItdHJhbnNmZXIvdjEiLCIvcGluL3YzIiwiL2NyZWNhcmQvdjIiLCIvY29udHJhY3QtaW5mby92MSIsIi9jb29sLWNvZGUvdjIiLCJjaGF0IiwiL2xpbWl0YXRvci92MSIsIi9tYnIvZGVsaXZlcnkvdjEiLCIvZGJvc2Nhbi92MSIsIi9tYnIvcGFja2FnZXMvdjEiLCIvZGVsaXZlcnkvdjEiLCIvbGltaXRhdG9yL3YyIiwiY3VycmVudGxldmVsMCIsImN1cnJlbnRsZXZlbDEiLCJjdXJyZW50bGV2ZWwyIiwiL2licy9yZXN0IiwiY3VycmVudGxldmVsMyIsIi9pYnMvcmVzdC9hY3RpdmUiLCJjdXJyZW50bGV2ZWw0Il0sImV4cCI6MTY2MTQzODk5NCwianRpIjoiODIzYjAwMTAtZjFjMS00OGJlLWI2MTgtMDI3ZDFhMTVjMTFhIiwiY2xpZW50X2lkIjoibXlfY3JlZGl0In0.Qo6nuPfELd1XZJT96oT-4Z_hdMJXs6HiXv46pLx3oKsSe5XIV7TOXt7As-nN3uWqIS468LB2WuO2sEhmkDVJnPFGthVb-zCzThpjcmT3qKTv-55-vB5-MXiEevY5qcddv6UmFpLv5-JdcZdDkGj1mFJbSuX5w-jpKxOqlsbwWXHEATm8Bk2LRCVbgTwkMKncxsu5AlHQSW1kCjF_2sBl4FZqs-uuRT05j2wVWvTbXHcgzhip5DdoAyddG91DiFDCIzvCoy2J6GcSdVclKOXY_YYAjKRzHkWb8MjoLuYA6mWDvObcuC5JdhRnZP1o1TjiApA0Y3Ud3yGcEbypawcIiQ
+Content-Length: 44
+Host: balancer-gateway-load1.omni.homecredit.ru:8112
+User-Agent: Apache-HttpClient/4.5.7 (Java/1.8.0_321)
+</requestHeader>
+      <responseData class="java.lang.String">{&quot;fee&quot;:0.00,&quot;feeSum&quot;:0,&quot;sum&quot;:23.00,&quot;fullSum&quot;:23.00,&quot;currency&quot;:&quot;RUR&quot;,&quot;links&quot;:[{&quot;rel&quot;:&quot;type&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/type&quot;},{&quot;rel&quot;:&quot;commission&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/commission&quot;},{&quot;rel&quot;:&quot;confirm&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/confirm&quot;},{&quot;rel&quot;:&quot;product-list&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/product-list&quot;}]}</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">POST</method>
+      <queryString class="java.lang.String">{&#xd;
+  &quot;sum&quot; : 23.00,&#xd;
+  &quot;currency&quot; : &quot;RUR&quot;&#xd;
+}</queryString>
+      <java.net.URL>https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/commission</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <sample t="108" it="0" lt="0" ct="0" ts="1661435395256" s="true" lb="01.06. - Подтверждение платежа" rc="200" rm="Number of samples in transaction : 1, number of failing samples : 0" tn="UC 01.Transfer self 1-2" dt="" de="" by="975" sby="2991" sc="1" ec="0" ng="4" na="21" hn="VDI-P162">
+    <httpSample t="108" it="0" lt="108" ct="0" ts="1661435395256" s="true" lb="01.06.01. - /transfer/v1/self/transfer/huid/confirm" rc="200" rm="" tn="UC 01.Transfer self 1-2" dt="text" de="UTF-8" by="975" sby="2991" sc="1" ec="0" ng="4" na="21" hn="VDI-P162">
+      <assertionResult>
+        <name>RA 200</name>
+        <failure>false</failure>
+        <error>false</error>
+      </assertionResult>
+      <responseHeader class="java.lang.String">HTTP/1.1 200 
+vary: Origin
+vary: Access-Control-Request-Method
+vary: Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+strict-transport-security: max-age=31536000 ; includeSubDomains
+x-frame-options: DENY
+content-type: application/json;charset=UTF-8
+transfer-encoding: chunked
+date: Thu, 25 Aug 2022 13:49:55 GMT
+x-routing-target: renv-0022-pool
+</responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdXJyZW50TGV2ZWw6NCIsImN1aWQiOiIxODMzMjQzMCIsInNjb3BlIjpbIi9hcHBsaWNhdGlvbi92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiLCIvcGFzc3BvcnQtaXNzdWVyL3YxIiwiL2Zpb25hL3YxIiwiL2tsYWRyLXBnLXNlYXJjaC92MSIsIi9xNWYvdjEiLCIvY2hlY2tzL3YxIiwiL2NjLXNpZ24vdjEiLCIvc2VydmljZS1tYW5hZ2VtZW50L3YxIiwiL3Bpbi92MS8iLCIvZGVjYXJkL3YxIiwiL2FidGVzdGVyL3YxIiwiL2RlYml0LWNhcmQtcmVnaXN0cnkvdjEiLCIvYm9wcm9kdWN0cy92MSIsIi9kZWJpdC1jYXJkLXJlZ2lzdHJ5L3YyIiwiL2Zvcm1yZWZlcmVuY2UvdjEiLCIvZGVjYXJkL3YyIiwiL3BhbmZpbmRlci92MSIsIi92aXNhLXBob25lLXRyYW5zZmVyL3YxIiwiL3VubWFzay92MSIsIi9jYXJkMnBob25lL3YxIiwiL3NlYXJjaC92MSIsIi9wYXlwYXkvdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2NhcmRyZWdpc3RyeS92MS9wMnBjcmVkaXQiLCIvY2FyZHJlZ2lzdHJ5L3YxL3N0YXR1cyIsIi9jYXJkcmVnaXN0cnkvdjEvY2FyZGluZm8iLCIvY2hhbmcvdjEiLCIvb2ZmZXJtYW5hZ2VyL3YxIiwiL2Zpbi1wcm90ZWN0LW1hbmFnZXIvdjEiLCIvZmluLXByb3RlY3QtbWFuYWdlci92MiIsIi9kZXBvc2l0by92MSIsIi9zbml0Y2gvdjEiLCIvcGluL3YyLyIsIi90cmFuc2ZlcnMvdjEiLCIvdHJhbnNmZXIvdjEiLCIvb3NzL3YxIiwiL3JlcG9ydGluZy1zZXJ2aWNlIiwiL3VybHNob3J0ZXIvdjEiLCIvdHJhbnMvdjEiLCIvc2NhbnMvdjEiLCIvZGlnaXRhbC1jYXJkL3YxIiwiL2lzc3VlLWNhcmQvdjEiLCIvcGhvbmUtdmVyaWZpY2F0aW9uL3YxIiwiL2VzaWEtYWNjb3VudC1pbmZvL3YxIiwiL3Bob25lYm9vay92MSIsIi9kb2N1bWVudC1wYXJzZXIvdjEiLCIvZG9jLWVuZ2luZS92MSIsIi9pbXNpL3YxIiwiL3R3LXNlcnZpY2VzLW1hbmFnZXIvdjEiLCIvc3VwcG9ydG5vdGlmL3YxIiwiL2pvdXJuYWxpc3QvdjEiLCJrYWZrYSIsIi9wYXltZW50cy92MSIsIi9lbWlzc2lvL3YxIiwiL1Bhc3NDb2RlL3YxIiwiL3NiZXItdHJhbnNmZXIvdjEiLCIvcGluL3YzIiwiL2NyZWNhcmQvdjIiLCIvY29udHJhY3QtaW5mby92MSIsIi9jb29sLWNvZGUvdjIiLCJjaGF0IiwiL2xpbWl0YXRvci92MSIsIi9tYnIvZGVsaXZlcnkvdjEiLCIvZGJvc2Nhbi92MSIsIi9tYnIvcGFja2FnZXMvdjEiLCIvZGVsaXZlcnkvdjEiLCIvbGltaXRhdG9yL3YyIiwiY3VycmVudGxldmVsMCIsImN1cnJlbnRsZXZlbDEiLCJjdXJyZW50bGV2ZWwyIiwiL2licy9yZXN0IiwiY3VycmVudGxldmVsMyIsIi9pYnMvcmVzdC9hY3RpdmUiLCJjdXJyZW50bGV2ZWw0Il0sImV4cCI6MTY2MTQzODk5NCwianRpIjoiODIzYjAwMTAtZjFjMS00OGJlLWI2MTgtMDI3ZDFhMTVjMTFhIiwiY2xpZW50X2lkIjoibXlfY3JlZGl0In0.Qo6nuPfELd1XZJT96oT-4Z_hdMJXs6HiXv46pLx3oKsSe5XIV7TOXt7As-nN3uWqIS468LB2WuO2sEhmkDVJnPFGthVb-zCzThpjcmT3qKTv-55-vB5-MXiEevY5qcddv6UmFpLv5-JdcZdDkGj1mFJbSuX5w-jpKxOqlsbwWXHEATm8Bk2LRCVbgTwkMKncxsu5AlHQSW1kCjF_2sBl4FZqs-uuRT05j2wVWvTbXHcgzhip5DdoAyddG91DiFDCIzvCoy2J6GcSdVclKOXY_YYAjKRzHkWb8MjoLuYA6mWDvObcuC5JdhRnZP1o1TjiApA0Y3Ud3yGcEbypawcIiQ
+Content-Length: 320
+Host: balancer-gateway-load1.omni.homecredit.ru:8112
+User-Agent: Apache-HttpClient/4.5.7 (Java/1.8.0_321)
+</requestHeader>
+      <responseData class="java.lang.String">{&quot;phone&quot;:&quot;+7 (***) ***-41-44&quot;,&quot;smsCheck&quot;:true,&quot;links&quot;:[{&quot;rel&quot;:&quot;check&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/check&quot;},{&quot;rel&quot;:&quot;resend&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/resend&quot;},{&quot;rel&quot;:&quot;transfer&quot;,&quot;href&quot;:&quot;https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer&quot;}]}</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">POST</method>
+      <queryString class="java.lang.String">{&#xd;
+	&quot;productFrom&quot; : {&#xd;
+	 	&quot;maskCardNumber&quot; : &quot;4469 15** **** 8104&quot;,&#xd;
+	    	&quot;accountNumber&quot; : &quot;40817810490011348387&quot;&#xd;
+	},&#xd;
+	&quot;productTo&quot; :  {&quot;maskCardNumber&quot; : &quot;406296******2266&quot;,&quot;accountNumber&quot; : &quot;40817810493300042867&quot;},&#xd;
+  	&quot;fee&quot;:0.0,&#xd;
+	&quot;sum&quot;:23.0,&#xd;
+	&quot;fullSum&quot;:23.0,&#xd;
+	&quot;currency&quot;:&quot;RUR&quot;,&#xd;
+	&quot;transferPurpose&quot;:&quot;loadtest&quot;&#xd;
+}</queryString>
+      <java.net.URL>https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/confirm</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <sample t="473" it="1" lt="0" ct="0" ts="1661435395364" s="false" lb="01.08. - Проверка СМС и исполнение платежа" rc="500" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC 01.Transfer self 1-2" dt="" de="" by="634" sby="2690" sc="1" ec="1" ng="0" na="0" hn="VDI-P162">
+    <httpSample t="473" it="0" lt="473" ct="0" ts="1661435395364" s="false" lb="01.08.01. - /transfer/v1/self/transfer/huid/check" rc="500" rm="" tn="UC 01.Transfer self 1-2" dt="text" de="UTF-8" by="634" sby="2690" sc="1" ec="1" ng="4" na="21" hn="VDI-P162">
+      <assertionResult>
+        <name>RA 200</name>
+        <failure>true</failure>
+        <error>false</error>
+        <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+      </assertionResult>
+      <responseHeader class="java.lang.String">HTTP/1.1 500 
+vary: Origin
+vary: Access-Control-Request-Method
+vary: Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+strict-transport-security: max-age=31536000 ; includeSubDomains
+x-frame-options: DENY
+content-type: application/json;charset=UTF-8
+transfer-encoding: chunked
+date: Thu, 25 Aug 2022 13:49:55 GMT
+x-routing-target: renv-0022-pool
+</responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdXJyZW50TGV2ZWw6NCIsImN1aWQiOiIxODMzMjQzMCIsInNjb3BlIjpbIi9hcHBsaWNhdGlvbi92MSIsIi9iaWtlci92MSIsIi9rbGFkci92MSIsIi9lc2lhL3YxIiwiL2Nhc2NhZGVyL3YxIiwiL2NvbW1pc3Nhci92MSIsIi90ZW1wbGF0b3IvdjEiLCIvcGFzc3BvcnQtaXNzdWVyL3YxIiwiL2Zpb25hL3YxIiwiL2tsYWRyLXBnLXNlYXJjaC92MSIsIi9xNWYvdjEiLCIvY2hlY2tzL3YxIiwiL2NjLXNpZ24vdjEiLCIvc2VydmljZS1tYW5hZ2VtZW50L3YxIiwiL3Bpbi92MS8iLCIvZGVjYXJkL3YxIiwiL2FidGVzdGVyL3YxIiwiL2RlYml0LWNhcmQtcmVnaXN0cnkvdjEiLCIvYm9wcm9kdWN0cy92MSIsIi9kZWJpdC1jYXJkLXJlZ2lzdHJ5L3YyIiwiL2Zvcm1yZWZlcmVuY2UvdjEiLCIvZGVjYXJkL3YyIiwiL3BhbmZpbmRlci92MSIsIi92aXNhLXBob25lLXRyYW5zZmVyL3YxIiwiL3VubWFzay92MSIsIi9jYXJkMnBob25lL3YxIiwiL3NlYXJjaC92MSIsIi9wYXlwYXkvdjEiLCIvY2FyZHJlZ2lzdHJ5L3YxIiwiL2NhcmRyZWdpc3RyeS92MS9wMnBjcmVkaXQiLCIvY2FyZHJlZ2lzdHJ5L3YxL3N0YXR1cyIsIi9jYXJkcmVnaXN0cnkvdjEvY2FyZGluZm8iLCIvY2hhbmcvdjEiLCIvb2ZmZXJtYW5hZ2VyL3YxIiwiL2Zpbi1wcm90ZWN0LW1hbmFnZXIvdjEiLCIvZmluLXByb3RlY3QtbWFuYWdlci92MiIsIi9kZXBvc2l0by92MSIsIi9zbml0Y2gvdjEiLCIvcGluL3YyLyIsIi90cmFuc2ZlcnMvdjEiLCIvdHJhbnNmZXIvdjEiLCIvb3NzL3YxIiwiL3JlcG9ydGluZy1zZXJ2aWNlIiwiL3VybHNob3J0ZXIvdjEiLCIvdHJhbnMvdjEiLCIvc2NhbnMvdjEiLCIvZGlnaXRhbC1jYXJkL3YxIiwiL2lzc3VlLWNhcmQvdjEiLCIvcGhvbmUtdmVyaWZpY2F0aW9uL3YxIiwiL2VzaWEtYWNjb3VudC1pbmZvL3YxIiwiL3Bob25lYm9vay92MSIsIi9kb2N1bWVudC1wYXJzZXIvdjEiLCIvZG9jLWVuZ2luZS92MSIsIi9pbXNpL3YxIiwiL3R3LXNlcnZpY2VzLW1hbmFnZXIvdjEiLCIvc3VwcG9ydG5vdGlmL3YxIiwiL2pvdXJuYWxpc3QvdjEiLCJrYWZrYSIsIi9wYXltZW50cy92MSIsIi9lbWlzc2lvL3YxIiwiL1Bhc3NDb2RlL3YxIiwiL3NiZXItdHJhbnNmZXIvdjEiLCIvcGluL3YzIiwiL2NyZWNhcmQvdjIiLCIvY29udHJhY3QtaW5mby92MSIsIi9jb29sLWNvZGUvdjIiLCJjaGF0IiwiL2xpbWl0YXRvci92MSIsIi9tYnIvZGVsaXZlcnkvdjEiLCIvZGJvc2Nhbi92MSIsIi9tYnIvcGFja2FnZXMvdjEiLCIvZGVsaXZlcnkvdjEiLCIvbGltaXRhdG9yL3YyIiwiY3VycmVudGxldmVsMCIsImN1cnJlbnRsZXZlbDEiLCJjdXJyZW50bGV2ZWwyIiwiL2licy9yZXN0IiwiY3VycmVudGxldmVsMyIsIi9pYnMvcmVzdC9hY3RpdmUiLCJjdXJyZW50bGV2ZWw0Il0sImV4cCI6MTY2MTQzODk5NCwianRpIjoiODIzYjAwMTAtZjFjMS00OGJlLWI2MTgtMDI3ZDFhMTVjMTFhIiwiY2xpZW50X2lkIjoibXlfY3JlZGl0In0.Qo6nuPfELd1XZJT96oT-4Z_hdMJXs6HiXv46pLx3oKsSe5XIV7TOXt7As-nN3uWqIS468LB2WuO2sEhmkDVJnPFGthVb-zCzThpjcmT3qKTv-55-vB5-MXiEevY5qcddv6UmFpLv5-JdcZdDkGj1mFJbSuX5w-jpKxOqlsbwWXHEATm8Bk2LRCVbgTwkMKncxsu5AlHQSW1kCjF_2sBl4FZqs-uuRT05j2wVWvTbXHcgzhip5DdoAyddG91DiFDCIzvCoy2J6GcSdVclKOXY_YYAjKRzHkWb8MjoLuYA6mWDvObcuC5JdhRnZP1o1TjiApA0Y3Ud3yGcEbypawcIiQ
+Content-Length: 22
+Host: balancer-gateway-load1.omni.homecredit.ru:8112
+User-Agent: Apache-HttpClient/4.5.7 (Java/1.8.0_321)
+</requestHeader>
+      <responseData class="java.lang.String">{&quot;error&quot;:&quot;INTERNAL_SERVER_ERROR&quot;,&quot;description&quot;:&quot;Неизвестная ошибка взаимодействия&quot;,&quot;links&quot;:[]}</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">POST</method>
+      <queryString class="java.lang.String">{&#xd;
+  &quot;otp&quot; : &quot;1111&quot;&#xd;
+}</queryString>
+      <java.net.URL>https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/check</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+<sample t="71" it="0" lt="0" ct="0" ts="1661436003773" s="false" lb="UC 01.Transfer self" rc="500" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC 01.Transfer self 1-2" dt="" de="" by="464" sby="243" sc="1" ec="1" ng="15" na="71" hn="VDI-P162">
+  <sample t="71" it="0" lt="0" ct="0" ts="1661436003773" s="false" lb="01.00. - Генерация данных" rc="500" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC 01.Transfer self 1-2" dt="" de="" by="464" sby="243" sc="1" ec="1" ng="0" na="0" hn="VDI-P162">
+    <httpSample t="71" it="0" lt="71" ct="36" ts="1661436003773" s="false" lb="01.00.01. - (http) - getDataPoolNextVal (transfer)" rc="500" rm="Internal Server Error" tn="UC 01.Transfer self 1-2" dt="text" de="utf-8" by="464" sby="243" sc="1" ec="1" ng="15" na="71" hn="VDI-P162">
+      <responseHeader class="java.lang.String">HTTP/1.1 500 Internal Server Error
+Server: nginx/1.12.0
+Date: Thu, 25 Aug 2022 14:00:03 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 84
+Connection: keep-alive
+vary: Origin
+access-control-allow-origin: *
+access-control-expose-headers: xtoken, x-token, fver
+fver: 1.10.50
+sver: 1.0.0
+Strict-Transport-Security: max-age=15724800; includeSubDomains
+</responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json
+Content-Length: 39
+Host: qad.load.homecredit.ru:8081
+User-Agent: Apache-HttpClient/4.5.7 (Java/1.8.0_321)
+</requestHeader>
+      <responseData class="java.lang.String">{&quot;statusCode&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;message&quot;:&quot;Row or pool is empty!&quot;}</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">POST</method>
+      <queryString class="java.lang.String">{&#xd;
+	&quot;pool_name&quot;:&quot;L1_0_MSRV_TRANSFER&quot;&#xd;
+}</queryString>
+      <java.net.URL>https://qad.load.homecredit.ru:8081/api/datapool/getitem</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+<sample t="67" it="0" lt="0" ct="0" ts="1661436003803" s="false" lb="UC 04.Transfer and type (self)" rc="500" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC 04.Transfer and type self 4-11" dt="" de="" by="464" sby="243" sc="1" ec="1" ng="45" na="71" hn="VDI-P162">
+  <sample t="66" it="1" lt="0" ct="0" ts="1661436003803" s="false" lb="04.00. - Генерация данных" rc="500" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC 04.Transfer and type self 4-11" dt="" de="" by="464" sby="243" sc="1" ec="1" ng="0" na="0" hn="VDI-P162">
+    <httpSample t="66" it="0" lt="66" ct="38" ts="1661436003804" s="false" lb="04.00.01. - (http) - getDataPoolNextVal (transfer)" rc="500" rm="Internal Server Error" tn="UC 04.Transfer and type self 4-11" dt="text" de="utf-8" by="464" sby="243" sc="1" ec="1" ng="45" na="71" hn="VDI-P162">
+      <responseHeader class="java.lang.String">HTTP/1.1 500 Internal Server Error
+Server: nginx/1.12.0
+Date: Thu, 25 Aug 2022 14:00:04 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 84
+Connection: keep-alive
+vary: Origin
+access-control-allow-origin: *
+access-control-expose-headers: xtoken, x-token, fver
+fver: 1.10.50
+sver: 1.0.0
+Strict-Transport-Security: max-age=15724800; includeSubDomains
+</responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json
+Content-Length: 39
+Host: qad.load.homecredit.ru:8081
+User-Agent: Apache-HttpClient/4.5.7 (Java/1.8.0_321)
+</requestHeader>
+      <responseData class="java.lang.String">{&quot;statusCode&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;message&quot;:&quot;Row or pool is empty!&quot;}</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">POST</method>
+      <queryString class="java.lang.String">{&#xd;
+	&quot;pool_name&quot;:&quot;L1_0_MSRV_TRANSFER&quot;&#xd;
+}</queryString>
+      <java.net.URL>https://qad.load.homecredit.ru:8081/api/datapool/getitem</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+
+</testResults>

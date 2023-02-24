@@ -1,0 +1,284 @@
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <th>Thread name</th>
+      <th>Parent name</th>
+      <th>Sampler name</th>
+      <th>Response code</th>
+      <th>Time stamp</th>
+      <th>Host name</th>
+      <th>Request method, URL</th>
+      <th>Responce Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="12" valign="top">UC 01.Transfer self</th>
+      <th rowspan="5" valign="top">01.00. - Генерация данных</th>
+      <th rowspan="5" valign="top">01.00.01. - (http) - getDataPoolNextVal (transfer)</th>
+      <th rowspan="5" valign="top">500</th>
+      <th>25.08.2022 18:00:03.773</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:00:04.497</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:14:09.681</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:20:47.507</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:27:25.798</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">01.02. - Создание сессии (self)</th>
+      <th rowspan="2" valign="top">01.02.01 - /transfer/v1/self/transfer</th>
+      <th rowspan="2" valign="top">500</th>
+      <th>25.08.2022 18:24:41.353</th>
+      <th>VDI-P162</th>
+      <th>GET https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer</th>
+      <th>{"resultCode":"Error","resultText":"Системная ошибка","links":[]}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:26:02.100</th>
+      <th>VDI-P162</th>
+      <th>GET https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer</th>
+      <th>{"resultCode":"Error","resultText":"Системная ошибка","links":[]}</th>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">01.08. - Проверка СМС и исполнение платежа</th>
+      <th rowspan="5" valign="top">01.08.01. - /transfer/v1/self/transfer/huid/check</th>
+      <th rowspan="5" valign="top">500</th>
+      <th>25.08.2022 17:49:55.364</th>
+      <th>VDI-P162</th>
+      <th>POST https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/78112470-48b6-4379-9ada-89afbeff6dd6/check</th>
+      <th>{"error":"INTERNAL_SERVER_ERROR","description":"Неизвестная ошибка взаимодействия","links":[]}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:09:27.991</th>
+      <th>VDI-P162</th>
+      <th>POST https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/9502dff6-c6b6-4881-a83a-4b73b09bab26/check</th>
+      <th>{"error":"INTERNAL_SERVER_ERROR","description":"Неизвестная ошибка взаимодействия","links":[]}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:15:24.308</th>
+      <th>VDI-P162</th>
+      <th>POST https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/98c016cc-a5e0-44f3-ada5-0c730ad74d98/check</th>
+      <th>{"error":"INTERNAL_SERVER_ERROR","description":"Неизвестная ошибка взаимодействия","links":[]}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:22:02.343</th>
+      <th>VDI-P162</th>
+      <th>POST https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/9fdd63d1-71f0-4fcc-9cdd-8ad830a65eff/check</th>
+      <th>{"error":"INTERNAL_SERVER_ERROR","description":"Неизвестная ошибка взаимодействия","links":[]}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:22:44.724</th>
+      <th>VDI-P162</th>
+      <th>POST https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer/17441787-e5c2-4a7c-819b-00c5e7f7bc46/check</th>
+      <th>{"error":"INTERNAL_SERVER_ERROR","description":"Неизвестная ошибка взаимодействия","links":[]}</th>
+    </tr>
+    <tr>
+      <th rowspan="6" valign="top">UC 02.Transfer card</th>
+      <th rowspan="2" valign="top">02.00. - Генерация данных</th>
+      <th rowspan="2" valign="top">02.00.01. - (http) - getDataPoolNextVal (transfer)</th>
+      <th rowspan="2" valign="top">500</th>
+      <th>25.08.2022 18:07:31.697</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:14:09.771</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">02.05. - Подтверждение платежа</th>
+      <th rowspan="3" valign="top">02.05.01. - /transfer/v1/card/transfer/huid/confirm</th>
+      <th rowspan="3" valign="top">400</th>
+      <th>25.08.2022 18:08:28.989</th>
+      <th>VDI-P162</th>
+      <th>POST https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/card/transfer/6e918f66-072c-4edb-836c-f3738a9d198d/confirm</th>
+      <th>Non-TEXT response data, cannot record: ()</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:12:59.145</th>
+      <th>VDI-P162</th>
+      <th>POST https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/card/transfer/67eeb4a7-3983-4bfb-b2f3-4087e654a19a/confirm</th>
+      <th>Non-TEXT response data, cannot record: ()</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:15:07.382</th>
+      <th>VDI-P162</th>
+      <th>POST https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/card/transfer/954aba24-1c6f-407c-b892-4b3bff20eccd/confirm</th>
+      <th>Non-TEXT response data, cannot record: ()</th>
+    </tr>
+    <tr>
+      <th>02.07. - Проверка СМС и исполнение платежа</th>
+      <th>02.07.01. - /transfer/v1/card/transfer/huid/check</th>
+      <th>500</th>
+      <th>25.08.2022 18:21:22.934</th>
+      <th>VDI-P162</th>
+      <th>POST https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/card/transfer/976e3074-d7f0-4231-9fea-a774bb14967e/check</th>
+      <th>{"error":"INTERNAL_SERVER_ERROR","description":"Неизвестная ошибка взаимодействия","links":[]}</th>
+    </tr>
+    <tr>
+      <th rowspan="20" valign="top">UC 04.Transfer and type self</th>
+      <th rowspan="17" valign="top">04.00. - Генерация данных</th>
+      <th rowspan="17" valign="top">04.00.01. - (http) - getDataPoolNextVal (transfer)</th>
+      <th rowspan="17" valign="top">500</th>
+      <th>25.08.2022 18:00:03.804</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:00:03.924</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:00:04.049</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:00:04.166</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:07:31.403</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:07:31.522</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:07:31.650</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:07:31.766</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:14:09.564</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:14:09.672</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:14:09.684</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:14:09.794</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:20:47.359</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:20:47.486</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:20:47.597</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:20:47.717</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:20:47.837</th>
+      <th>VDI-P162</th>
+      <th>POST https://qad.load.homecredit.ru:8081/api/datapool/getitem</th>
+      <th>{"statusCode":500,"error":"Internal Server Error","message":"Row or pool is empty!"}</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">04.02. - Создание сессии (self)</th>
+      <th rowspan="2" valign="top">04.02.01 - /transfer/v1/self/transfer</th>
+      <th rowspan="2" valign="top">500</th>
+      <th>25.08.2022 18:17:11.042</th>
+      <th>VDI-P162</th>
+      <th>GET https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer</th>
+      <th>{"resultCode":"Error","resultText":"Системная ошибка","links":[]}</th>
+    </tr>
+    <tr>
+      <th>25.08.2022 18:21:07.141</th>
+      <th>VDI-P162</th>
+      <th>GET https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer</th>
+      <th>{"resultCode":"Error","resultText":"Системная ошибка","links":[]}</th>
+    </tr>
+    <tr>
+      <th>04.05. - Повторное создание сессии (self)</th>
+      <th>04.05.01 - /transfer/v1/self/transfer</th>
+      <th>500</th>
+      <th>25.08.2022 18:03:07.666</th>
+      <th>VDI-P162</th>
+      <th>GET https://balancer-gateway-load1.omni.homecredit.ru:8112/transfer/v1/self/transfer</th>
+      <th>{"resultCode":"Error","resultText":"Системная ошибка","links":[]}</th>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,84 @@
+<div class="container text-left">
+    <div class="row">
+        <div class="col">
+            <dl class="row">
+                <dt class="col-sm-3">Thread name</dt>
+                <dd class="col-sm-9">{{ thread_name }}</dd>
+
+                <dt class="col-sm-3">Parent name</dt>
+                <dd class="col-sm-9">{{ parent_name }}</dd>
+
+                <dt class="col-sm-3">Sampler name</dt>
+                <dd class="col-sm-9">{{ sampler_name }}</dd>
+
+                <dt class="col-sm-3">Grp treads</dt>
+                <dd class="col-sm-9">{{ grp_thread }}</dd>
+
+                <dt class="col-sm-3">URL</dt>
+                <dd class="col-sm-9">{{ method }} {{ url }}</dd>
+
+                <dt class="col-sm-3">Reponce code</dt>
+                <dd class="col-sm-9">{{ responce_code }}</dd>
+
+                <dt class="col-sm-3">Host name</dt>
+                <dd class="col-sm-9">{{ host_name }}</dd>
+
+
+        </div>
+        <div class="col">
+            <dl class="row">
+                <dt class="col-sm-3">Start time</dt>
+                <dd class="col-sm-9">{{ time_stamp }}</dd>
+
+                <dt class="col-sm-3">End time</dt>
+                <dd class="col-sm-9">{{ end_time }}</dd>
+
+                <dt class="col-sm-3">Response time</dt>
+                <dd class="col-sm-9">{{ response_time }}</dd>
+
+                <dt class="col-sm-3 text">Connect time</dt>
+                <dd class="col-sm-9">{{ connect_time }}</dd>
+
+                <dt class="col-sm-3 text">Latency</dt>
+                <dd class="col-sm-9">{{ latency }}</dd>
+
+                <dt class="col-sm-3 text">Idel time</dt>
+                <dd class="col-sm-9">{{ idel_time }}</dd>
+
+                <dt class="col-sm-3 text">Assertion result</dt>
+                <dd class="col-sm-9">{{ assertion_result }}</dd>
+
+
+                    </dl>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="row border-top">
+        <div class="col">
+            <div class="overflow-auto">
+                <h5>Request data</h5>
+                <d>{{ request_data }}</d>
+            </div>
+        </div>
+        <div class="col">
+            <div class="overflow-auto">
+                <h5>Response data</h5>
+                <d>{{ response_data }}</d>
+            </div>
+        </div>
+    </div>
+    <div class="row border-top">
+        <div class="col">
+            <h5>Request headers</h5>
+            <d>{{ request_header }}</d>
+        </div>
+        <div class="col">
+            <h5>Response header</h5>
+            <d>
+                {{ response_header }}
+            </d>
+        </div>
+    </div>
+
+</div>

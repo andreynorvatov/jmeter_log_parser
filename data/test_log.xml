@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<sample t="2279" it="2" lt="0" ct="0" ts="1662748485272" s="false" lb="02.01. Верхний транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.02 Тестовая тред группа 2-1" dt="" de="" by="2390" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+  <sample t="2279" it="2" lt="0" ct="0" ts="1662748485272" s="false" lb="02.01.01 Тестовый транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.02 Тестовая тред группа 2-1" dt="" de="" by="2390" sby="0" sc="1" ec="1" ng="0" na="0" hn="DKS-Norvatov">
+    <httpSample t="2279" it="0" lt="0" ct="2279" ts="1662748485273" s="false" lb="02.01.01.01 Тестовый ошибочный реквест" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: test" tn="UC.02 Тестовая тред группа 2-1" dt="text" de="" by="2390" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+      <assertionResult>
+        <name>Response Assertion</name>
+        <failure>true</failure>
+        <error>false</error>
+        <failureMessage>Test failed: text expected to contain /done/</failureMessage>
+      </assertionResult>
+      <responseHeader class="java.lang.String"></responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Host: test:12
+User-Agent: Apache-HttpClient/4.5.7 (Java/16.0.2)
+</requestHeader>
+      <responseData class="java.lang.String">java.net.UnknownHostException: test&#xd;
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)&#xd;
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:886)&#xd;
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:334)&#xd;
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)&#xd;
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)&#xd;
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)&#xd;
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)&#xd;
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:841)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:572)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:67)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1231)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1220)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:622)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:546)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:486)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:474)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:253)&#xd;
+	at java.base/java.lang.Thread.run(Thread.java:831)&#xd;
+</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">GET</method>
+      <queryString class="java.lang.String"></queryString>
+      <java.net.URL>http://test:12/test/test</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+<sample t="2279" it="2" lt="0" ct="0" ts="1662748485272" s="false" lb="01.01. Верхний транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.01 Тестовая тред группа 1-1" dt="" de="" by="2592" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+  <sample t="2279" it="2" lt="0" ct="0" ts="1662748485272" s="false" lb="01.01.01 Тестовый транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.01 Тестовая тред группа 1-1" dt="" de="" by="2592" sby="0" sc="1" ec="1" ng="0" na="0" hn="DKS-Norvatov">
+    <httpSample t="2279" it="0" lt="0" ct="2279" ts="1662748485273" s="false" lb="01.01.01.01 Тестовый ошибочный реквест" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: Этот хост неизвестен (test)" tn="UC.01 Тестовая тред группа 1-1" dt="text" de="" by="2592" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+      <assertionResult>
+        <name>Response Assertion</name>
+        <failure>true</failure>
+        <error>false</error>
+        <failureMessage>Test failed: text expected to contain /done/</failureMessage>
+      </assertionResult>
+      <responseHeader class="java.lang.String"></responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Host: test:12
+User-Agent: Apache-HttpClient/4.5.7 (Java/16.0.2)
+</requestHeader>
+      <responseData class="java.lang.String">java.net.UnknownHostException: Ýòîò õîñò íåèçâåñòåí (test)&#xd;
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)&#xd;
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:932)&#xd;
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1517)&#xd;
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:851)&#xd;
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:334)&#xd;
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)&#xd;
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)&#xd;
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)&#xd;
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)&#xd;
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:841)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:572)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:67)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1231)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1220)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:622)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:546)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:486)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:474)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:253)&#xd;
+	at java.base/java.lang.Thread.run(Thread.java:831)&#xd;
+</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">GET</method>
+      <queryString class="java.lang.String"></queryString>
+      <java.net.URL>http://test:12/test/test</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+<sample t="1" it="1" lt="0" ct="0" ts="1662748487555" s="false" lb="02.01. Верхний транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.02 Тестовая тред группа 2-1" dt="" de="" by="2307" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+  <sample t="1" it="1" lt="0" ct="0" ts="1662748487555" s="false" lb="02.01.01 Тестовый транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.02 Тестовая тред группа 2-1" dt="" de="" by="2307" sby="0" sc="1" ec="1" ng="0" na="0" hn="DKS-Norvatov">
+    <httpSample t="1" it="0" lt="0" ct="1" ts="1662748487556" s="false" lb="02.01.01.01 Тестовый ошибочный реквест" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: test" tn="UC.02 Тестовая тред группа 2-1" dt="text" de="" by="2307" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+      <assertionResult>
+        <name>Response Assertion</name>
+        <failure>true</failure>
+        <error>false</error>
+        <failureMessage>Test failed: text expected to contain /done/</failureMessage>
+      </assertionResult>
+      <responseHeader class="java.lang.String"></responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Host: test:12
+User-Agent: Apache-HttpClient/4.5.7 (Java/16.0.2)
+</requestHeader>
+      <responseData class="java.lang.String">java.net.UnknownHostException: test&#xd;
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)&#xd;
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:334)&#xd;
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)&#xd;
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)&#xd;
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)&#xd;
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)&#xd;
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:841)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:572)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:67)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1231)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1220)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:622)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:546)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:486)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:474)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:253)&#xd;
+	at java.base/java.lang.Thread.run(Thread.java:831)&#xd;
+</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">GET</method>
+      <queryString class="java.lang.String"></queryString>
+      <java.net.URL>http://test:12/test/test</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+<sample t="1" it="1" lt="0" ct="0" ts="1662748487556" s="false" lb="01.01. Верхний транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.01 Тестовая тред группа 1-1" dt="" de="" by="2307" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+  <sample t="1" it="1" lt="0" ct="0" ts="1662748487556" s="false" lb="01.01.01 Тестовый транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.01 Тестовая тред группа 1-1" dt="" de="" by="2307" sby="0" sc="1" ec="1" ng="0" na="0" hn="DKS-Norvatov">
+    <httpSample t="1" it="0" lt="0" ct="0" ts="1662748487557" s="false" lb="01.01.01.01 Тестовый ошибочный реквест" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: test" tn="UC.01 Тестовая тред группа 1-1" dt="text" de="" by="2307" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+      <assertionResult>
+        <name>Response Assertion</name>
+        <failure>true</failure>
+        <error>false</error>
+        <failureMessage>Test failed: text expected to contain /done/</failureMessage>
+      </assertionResult>
+      <responseHeader class="java.lang.String"></responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Host: test:12
+User-Agent: Apache-HttpClient/4.5.7 (Java/16.0.2)
+</requestHeader>
+      <responseData class="java.lang.String">java.net.UnknownHostException: test&#xd;
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)&#xd;
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:334)&#xd;
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)&#xd;
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)&#xd;
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)&#xd;
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)&#xd;
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:841)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:572)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:67)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1231)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1220)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:622)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:546)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:486)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:474)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:253)&#xd;
+	at java.base/java.lang.Thread.run(Thread.java:831)&#xd;
+</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">GET</method>
+      <queryString class="java.lang.String"></queryString>
+      <java.net.URL>http://test:12/test/test</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+<sample t="1" it="1" lt="0" ct="0" ts="1662748487558" s="false" lb="02.01. Верхний транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.02 Тестовая тред группа 2-1" dt="" de="" by="2307" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+  <sample t="1" it="1" lt="0" ct="0" ts="1662748487558" s="false" lb="02.01.01 Тестовый транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.02 Тестовая тред группа 2-1" dt="" de="" by="2307" sby="0" sc="1" ec="1" ng="0" na="0" hn="DKS-Norvatov">
+    <httpSample t="1" it="0" lt="0" ct="0" ts="1662748487559" s="false" lb="02.01.01.01 Тестовый ошибочный реквест" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: test" tn="UC.02 Тестовая тред группа 2-1" dt="text" de="" by="2307" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+      <assertionResult>
+        <name>Response Assertion</name>
+        <failure>true</failure>
+        <error>false</error>
+        <failureMessage>Test failed: text expected to contain /done/</failureMessage>
+      </assertionResult>
+      <responseHeader class="java.lang.String"></responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Host: test:12
+User-Agent: Apache-HttpClient/4.5.7 (Java/16.0.2)
+</requestHeader>
+      <responseData class="java.lang.String">java.net.UnknownHostException: test&#xd;
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)&#xd;
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:334)&#xd;
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)&#xd;
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)&#xd;
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)&#xd;
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)&#xd;
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:841)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:572)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:67)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1231)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1220)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:622)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:546)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:486)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:474)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:253)&#xd;
+	at java.base/java.lang.Thread.run(Thread.java:831)&#xd;
+</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">GET</method>
+      <queryString class="java.lang.String"></queryString>
+      <java.net.URL>http://test:12/test/test</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+<sample t="0" it="2" lt="0" ct="0" ts="1662748487559" s="false" lb="01.01. Верхний транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.01 Тестовая тред группа 1-1" dt="" de="" by="2307" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+  <sample t="0" it="2" lt="0" ct="0" ts="1662748487559" s="false" lb="01.01.01 Тестовый транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.01 Тестовая тред группа 1-1" dt="" de="" by="2307" sby="0" sc="1" ec="1" ng="0" na="0" hn="DKS-Norvatov">
+    <httpSample t="0" it="0" lt="0" ct="0" ts="1662748487560" s="false" lb="01.01.01.01 Тестовый ошибочный реквест" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: test" tn="UC.01 Тестовая тред группа 1-1" dt="text" de="" by="2307" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+      <assertionResult>
+        <name>Response Assertion</name>
+        <failure>true</failure>
+        <error>false</error>
+        <failureMessage>Test failed: text expected to contain /done/</failureMessage>
+      </assertionResult>
+      <responseHeader class="java.lang.String"></responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Host: test:12
+User-Agent: Apache-HttpClient/4.5.7 (Java/16.0.2)
+</requestHeader>
+      <responseData class="java.lang.String">java.net.UnknownHostException: test&#xd;
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)&#xd;
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:334)&#xd;
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)&#xd;
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)&#xd;
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)&#xd;
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)&#xd;
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:841)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:572)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:67)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1231)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1220)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:622)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:546)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:486)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:474)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:253)&#xd;
+	at java.base/java.lang.Thread.run(Thread.java:831)&#xd;
+</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">GET</method>
+      <queryString class="java.lang.String"></queryString>
+      <java.net.URL>http://test:12/test/test</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+<sample t="0" it="2" lt="0" ct="0" ts="1662748487561" s="false" lb="02.01. Верхний транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.02 Тестовая тред группа 2-1" dt="" de="" by="2307" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+  <sample t="0" it="2" lt="0" ct="0" ts="1662748487561" s="false" lb="02.01.01 Тестовый транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.02 Тестовая тред группа 2-1" dt="" de="" by="2307" sby="0" sc="1" ec="1" ng="0" na="0" hn="DKS-Norvatov">
+    <httpSample t="0" it="0" lt="0" ct="0" ts="1662748487562" s="false" lb="02.01.01.01 Тестовый ошибочный реквест" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: test" tn="UC.02 Тестовая тред группа 2-1" dt="text" de="" by="2307" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+      <assertionResult>
+        <name>Response Assertion</name>
+        <failure>true</failure>
+        <error>false</error>
+        <failureMessage>Test failed: text expected to contain /done/</failureMessage>
+      </assertionResult>
+      <responseHeader class="java.lang.String"></responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Host: test:12
+User-Agent: Apache-HttpClient/4.5.7 (Java/16.0.2)
+</requestHeader>
+      <responseData class="java.lang.String">java.net.UnknownHostException: test&#xd;
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)&#xd;
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:334)&#xd;
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)&#xd;
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)&#xd;
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)&#xd;
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)&#xd;
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:841)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:572)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:67)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1231)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1220)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:622)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:546)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:486)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:474)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:253)&#xd;
+	at java.base/java.lang.Thread.run(Thread.java:831)&#xd;
+</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">GET</method>
+      <queryString class="java.lang.String"></queryString>
+      <java.net.URL>http://test:12/test/test</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+<sample t="0" it="2" lt="0" ct="0" ts="1662748487562" s="false" lb="01.01. Верхний транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.01 Тестовая тред группа 1-1" dt="" de="" by="2307" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+  <sample t="0" it="2" lt="0" ct="0" ts="1662748487562" s="false" lb="01.01.01 Тестовый транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.01 Тестовая тред группа 1-1" dt="" de="" by="2307" sby="0" sc="1" ec="1" ng="0" na="0" hn="DKS-Norvatov">
+    <httpSample t="0" it="0" lt="0" ct="0" ts="1662748487563" s="false" lb="01.01.01.01 Тестовый ошибочный реквест" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: test" tn="UC.01 Тестовая тред группа 1-1" dt="text" de="" by="2307" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+      <assertionResult>
+        <name>Response Assertion</name>
+        <failure>true</failure>
+        <error>false</error>
+        <failureMessage>Test failed: text expected to contain /done/</failureMessage>
+      </assertionResult>
+      <responseHeader class="java.lang.String"></responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Host: test:12
+User-Agent: Apache-HttpClient/4.5.7 (Java/16.0.2)
+</requestHeader>
+      <responseData class="java.lang.String">java.net.UnknownHostException: test&#xd;
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)&#xd;
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:334)&#xd;
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)&#xd;
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)&#xd;
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)&#xd;
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)&#xd;
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:841)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:572)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:67)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1231)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1220)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:622)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:546)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:486)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:474)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:253)&#xd;
+	at java.base/java.lang.Thread.run(Thread.java:831)&#xd;
+</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">GET</method>
+      <queryString class="java.lang.String"></queryString>
+      <java.net.URL>http://test:12/test/test</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+<sample t="0" it="2" lt="0" ct="0" ts="1662748487564" s="false" lb="02.01. Верхний транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.02 Тестовая тред группа 2-1" dt="" de="" by="2307" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+  <sample t="0" it="2" lt="0" ct="0" ts="1662748487564" s="false" lb="02.01.01 Тестовый транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.02 Тестовая тред группа 2-1" dt="" de="" by="2307" sby="0" sc="1" ec="1" ng="0" na="0" hn="DKS-Norvatov">
+    <httpSample t="0" it="0" lt="0" ct="0" ts="1662748487565" s="false" lb="02.01.01.01 Тестовый ошибочный реквест" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: test" tn="UC.02 Тестовая тред группа 2-1" dt="text" de="" by="2307" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+      <assertionResult>
+        <name>Response Assertion</name>
+        <failure>true</failure>
+        <error>false</error>
+        <failureMessage>Test failed: text expected to contain /done/</failureMessage>
+      </assertionResult>
+      <responseHeader class="java.lang.String"></responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Host: test:12
+User-Agent: Apache-HttpClient/4.5.7 (Java/16.0.2)
+</requestHeader>
+      <responseData class="java.lang.String">java.net.UnknownHostException: test&#xd;
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)&#xd;
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:334)&#xd;
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)&#xd;
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)&#xd;
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)&#xd;
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)&#xd;
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:841)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:572)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:67)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1231)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1220)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:622)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:546)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:486)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:474)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:253)&#xd;
+	at java.base/java.lang.Thread.run(Thread.java:831)&#xd;
+</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">GET</method>
+      <queryString class="java.lang.String"></queryString>
+      <java.net.URL>http://test:12/test/test</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+<sample t="1" it="1" lt="0" ct="0" ts="1662748487566" s="false" lb="01.01. Верхний транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.01 Тестовая тред группа 1-1" dt="" de="" by="2307" sby="0" sc="1" ec="1" ng="1" na="1" hn="DKS-Norvatov">
+  <sample t="1" it="1" lt="0" ct="0" ts="1662748487566" s="false" lb="01.01.01 Тестовый транзакшн контроллер" rc="Non HTTP response code: java.net.UnknownHostException" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="UC.01 Тестовая тред группа 1-1" dt="" de="" by="2307" sby="0" sc="1" ec="1" ng="0" na="0" hn="DKS-Norvatov">
+    <httpSample t="1" it="0" lt="0" ct="1" ts="1662748487566" s="false" lb="01.01.01.01 Тестовый ошибочный реквест" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: test" tn="UC.01 Тестовая тред группа 1-1" dt="text" de="" by="2307" sby="0" sc="1" ec="1" ng="1" na="2" hn="DKS-Norvatov">
+      <assertionResult>
+        <name>Response Assertion</name>
+        <failure>true</failure>
+        <error>false</error>
+        <failureMessage>Test failed: text expected to contain /done/</failureMessage>
+      </assertionResult>
+      <responseHeader class="java.lang.String"></responseHeader>
+      <requestHeader class="java.lang.String">Connection: keep-alive
+Host: test:12
+User-Agent: Apache-HttpClient/4.5.7 (Java/16.0.2)
+</requestHeader>
+      <responseData class="java.lang.String">java.net.UnknownHostException: test&#xd;
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)&#xd;
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)&#xd;
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:334)&#xd;
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)&#xd;
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)&#xd;
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)&#xd;
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)&#xd;
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:841)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:572)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:67)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1231)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1220)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:622)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:546)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:486)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:474)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:253)&#xd;
+	at java.base/java.lang.Thread.run(Thread.java:831)&#xd;
+</responseData>
+      <responseFile class="java.lang.String"></responseFile>
+      <cookies class="java.lang.String"></cookies>
+      <method class="java.lang.String">GET</method>
+      <queryString class="java.lang.String"></queryString>
+      <java.net.URL>http://test:12/test/test</java.net.URL>
+    </httpSample>
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String"></requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+  </sample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+
+</testResults>
